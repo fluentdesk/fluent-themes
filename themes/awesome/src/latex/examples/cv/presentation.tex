@@ -13,10 +13,10 @@
 %---------------------------------------------------------
   \cventry
     {[[ spk.title ]]} % Role
-    {[[ spk.event ]])} % Event
+    {[[ spk.event ]]} % Event
     {[[ spk.location ]]} % Location
     {[[ h.date(spk.date) ]]} % Date(s)
-    {[~ if (r.speaking && r.speaking.length) { ~]
+    {[[ spk.summary ]][~ if (spk.highlights && spk.highlights.length) { ~]
       \begin{cvitems} % Description(s)
 [[ h.pad( spk.highlights.map( function(h) { return '\\item {' + h + '}' }), -8 ) ]]
       \end{cvitems}
